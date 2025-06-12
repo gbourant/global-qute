@@ -25,4 +25,11 @@ public class HelloResource extends Controller {
         return engine.parse("{YEAR}").instance();
     }
 
+    @GET
+    @Path("onboarding")
+    public TemplateInstance onboarding() {
+        return engine.parse("{#onboardingForm /}").instance();
+    }
+
+
 }
